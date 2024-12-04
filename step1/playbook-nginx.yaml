@@ -1,0 +1,21 @@
+---
+- name: webserver nginx install & start
+  hosts: webserver
+  tasks:
+    # Nginx 설치
+    - name: Nginx install
+      apt:
+        name: nginx
+        state: present
+
+    # Nginx service start를 위해 설치
+    - name: SystemCtl install
+      apt:
+        name: systemctl
+        state: present
+
+    # Nginx 데몬 실행
+    - name: Nginx start
+      service:
+        name: nginx
+        state: started

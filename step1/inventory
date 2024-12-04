@@ -1,0 +1,6 @@
+[webserver]
+172.17.0.3
+172.17.0.4
+
+[webserver:vars]
+ansible_user=root
