@@ -3,7 +3,17 @@
 
 [공식 문서](https://docs.ansible.com/ansible/latest/reference_appendices/config.html)
 
-
+* forks: 한번에 처리하는 노드의 개수.
+* host_key_checking: 앤서블에 연결하는 호스트의 키 확인 여부
+* remote_user: 서버에 접속하는 유저명
+* remote_port: 서버에 접속하는 SSH 포트
+```
+[defaults]
+forks = 50 
+host_key_checking = False
+remote_user = deploy
+remote_port = 22
+```
 
 ## Config file 설정
 * Ansible Config는 `ansible.cfg` 파일을 통해 관리됨
@@ -48,3 +58,11 @@ ansible [core 2.16.3]
   libyaml = True
 ```
 
+
+```
+[defaults]
+forks = 50 
+host_key_checking = False
+remote_user = deploy
+remote_port = 22
+```
