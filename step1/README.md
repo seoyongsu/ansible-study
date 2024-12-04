@@ -27,8 +27,8 @@ docker run -d -it --name managed-node-2 -p 8082:80 -p 2222:22 ubuntu
 `vi inventory`
 ```
 [webserver]
-172.17.0.2
 172.17.0.3
+172.17.0.4
 
 [webserver:vars]
 ansible_user=root
