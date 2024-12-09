@@ -8,4 +8,9 @@ Ansible이 관리 하는 서버(Managed Node)의 목록과 설정을 갖고 있�
 [가이드 문서](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html)
 
 
-```
+
+
+
+* Step 1: 기본 `ini`or `yaml` 방식으로 인벤토리 구성
+
+* Step 2 : 다이나믹 인벤토리 적용하며 `json` 형식으로 구성
