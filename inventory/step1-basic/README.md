@@ -59,7 +59,7 @@ vi inventory.yaml
 ```yaml
 all:
   hosts:
-    172:0.0.1:
+    172:0.0.2:
     default1:
       ansible_host: 172.0.0.3
     default2:
