@@ -22,7 +22,7 @@ ansible-inventory --help
 | 172.17.0.6 | webservers      | web1     |             |
 | 172.17.0.7 | webservers      | web2     | O           |
 | 172.17.0.8 | dbservers       |          | O (공통으로 관리) |
-| 172.17.0.8 | dbservers       | db2      | O (공통으로 관리) |
+| 172.17.0.9 | dbservers       | db2      | O (공통으로 관리) |
 
 ## 1. ini 방식
 `vi inventory` or `vi inventory.ini` 
