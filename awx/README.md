@@ -124,10 +124,21 @@ fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker run --rm -v '/ro
  "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
 ```
 
-
-
-
-
+**Centos 8**
+* CentOS 8 2021년 12월 31일부로 지원 종료
+```
+# yum update 
+CentOS Linux 8 - AppStream                                                                                                                                                                                                   0.0  B/s |   0  B     00:00
+Errors during downloading metadata for repository 'appstream':
+  - Curl error (6): Couldn't resolve host name for http://mirrorlist.centos.org/?release=8&arch=x86_64&repo=AppStream&infra=container [Could not resolve host: mirrorlist.centos.org]
+Error: Failed to download metadata for repo 'appstream': Cannot prepare internal mirrorlist: Curl error (6): Couldn't resolve host name for http://mirrorlist.centos.org/?release=8&arch=x86_64&repo=AppStream&infra=container [Could not resolve host: mirrorlist.centos.org]
+```
+* CentOS 8 Mirror site -> vault 로 전환
+```
+sed -i -e "s|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g" /etc/yum.repos.d/CentOS-*
+sed -i -e "s|mirrorlist=|#mirrorlist=|g" /etc/yum.repos.d/CentOS-*
+```
+[관련 자료](https://linuxhandbook.com/update-to-centos-stream/)
 
 
 
