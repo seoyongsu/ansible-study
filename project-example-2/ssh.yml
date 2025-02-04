@@ -1,0 +1,12 @@
+---
+- name: ssh play book
+  hosts: '{{ target_host | default("all") }}'
+  gather_facts: no
+  task:
+    - name: push ansible pub key
+      authorized_key:
+        user: "{{ ansible_user | default('root')}}"
+        state: present
+        key: "{{ lookup('file', item) }}"
+      with_items:
+        - '~/.ssh/ansible_key.pub'
