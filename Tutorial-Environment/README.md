@@ -53,7 +53,7 @@ service ssh restart
 
 ## Control Node
 **Ansible 설치**
-* OS 환경에 맞는 설치 방법은 [설치 가이드](install/Install) 문서 참고
+* OS 환경에 맞는 설치 방법은 [설치 가이드](install/README.md) 문서 참고
 ```
 apt update
 apt install ansible

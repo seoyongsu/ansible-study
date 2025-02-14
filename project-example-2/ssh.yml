@@ -2,7 +2,7 @@
 - name: ssh play book
   hosts: '{{ target_host | default("all") }}'
   gather_facts: no
-  task:
+  tasks:
     - name: push ansible pub key
       authorized_key:
         user: "{{ ansible_user | default('root')}}"

@@ -18,7 +18,7 @@ docker run -d -it --name managed-node-2 -p 8082:80 -p 2222:22 ubuntu
 | managed-node-1        | 172.17.0.3 | 80 -> 8081 | 22 -> 2221 |
 | managed-node-2        | 172.17.0.4 | 80 -> 8082 | 22 -> 2222 |
 
-참고 : [실습 환경 구성](../Tutorial-Environment.md)
+참고 : [실습 환경 구성](../Tutorial-Environment/README.md)
 
 
 ## Inventory

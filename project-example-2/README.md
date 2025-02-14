@@ -7,7 +7,7 @@
 ```shell
 docker run -d -it --name managed-node ubuntu
 ```
-참고 : [실습 환경 구성](../Tutorial-Environment.md)
+참고 : [실습 환경 구성](../Tutorial-Environment/README.md)
 
 
 ## SSH key 생성
@@ -32,7 +32,7 @@ host_key_checking = False
 - name: ssh play book
   hosts: '{{ target_host | default("all") }}'
   gather_facts: no
-  task:
+  tasks:
     - name: push ansible pub key
       authorized_key:
         user: "{{ ansible_user | default('root')}}"
