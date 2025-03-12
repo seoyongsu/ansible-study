@@ -27,3 +27,8 @@ sudo cat /var/lib/rancher/k3s/server/node-token
 ``` shell
 curl -sfL https://get.k3s.io | K3S_URL="https://<MASTER_IP>:6443" K3S_TOKEN="<NODE_TOKEN>" sh -
 ```
+
+
+# 기타
+권한 변경
+
