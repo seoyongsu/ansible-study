@@ -294,7 +294,7 @@ if __name__ == '__main__':
 
    ## 1. Make AWX New Inventory
    awx = AWXClient(host=args.awx_host, token=args.awx_token, username=args.awx_user, password=args.awx_password)
-   awx.create_inventory('Hello World', override=True)
+   inventory = awx.create_inventory('Hello World', override=True)
 
    ## 2. Inventory Add Hosts
    for item in inventories_items:
